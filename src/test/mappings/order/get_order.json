@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathTemplate": "/api/v1/order/{id}"
+  },
+
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "id": "a7580748-6a88-11ee-8c99-0242ac120002",
+      "petId": "93e9c52a-6a88-11ee-8c99-0242ac120002",
+      "date": "2023-10-16T16:55:06.664Z"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
