@@ -35,21 +35,17 @@ class OrderClientImpl2Spec
 
   "createOrder" - {
     "create order by id" in {
-      withContainers { _ =>
-        client
-          .createOrder(CreateOrderRequest(petId))
-          .asserting(_ shouldBe OrderResponse(id = id, petId = petId, date = date))
-      }
+      client
+        .createOrder(CreateOrderRequest(petId))
+        .asserting(_ shouldBe OrderResponse(id = id, petId = petId, date = date))
     }
   }
 
   "findOrder" - {
     "find order by id" in {
-      withContainers { _ =>
-        client
-          .findOrder(id)
-          .asserting(_ shouldBe Some(OrderResponse(id = id, petId = petId, date = date)))
-      }
+      client
+        .findOrder(id)
+        .asserting(_ shouldBe Some(OrderResponse(id = id, petId = petId, date = date)))
     }
   }
 }
