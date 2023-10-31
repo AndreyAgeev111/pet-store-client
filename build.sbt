@@ -14,6 +14,8 @@ val ficusVersion = "1.5.2"
 val wireVersion = "2.5.8"
 val wireMockVersion = "3.0.0"
 val testContainersVersion = "0.40.15"
+val catsRetryVersion = "3.1.0"
+val catsLoggingVersion = "2.6.0"
 
 lazy val root = (project in file("."))
   .settings(
@@ -25,6 +27,9 @@ lazy val root = (project in file("."))
       "com.softwaremill.sttp.client3" %% "core" % sttpClientVersion,
       "com.softwaremill.sttp.client3" %% "circe" % sttpClientVersion,
       "com.softwaremill.sttp.client3" %% "async-http-client-backend-cats" % catsBackendVersion,
+      "com.github.cb372" %% "cats-retry" % catsRetryVersion,
+      "org.typelevel" %% "log4cats-core" % catsLoggingVersion,
+      "org.typelevel" %% "log4cats-slf4j" % catsLoggingVersion,
       "io.circe" %% "circe-core" % circeVersion,
       "io.circe" %% "circe-generic" % circeVersion,
       "io.circe" %% "circe-parser" % circeVersion,

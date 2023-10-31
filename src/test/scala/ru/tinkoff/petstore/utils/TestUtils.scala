@@ -1,4 +1,4 @@
-package ru.tinkoff.petstore.client.utils
+package ru.tinkoff.petstore.utils
 
 import io.circe.Json
 import io.circe.parser.parse

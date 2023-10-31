@@ -8,8 +8,8 @@ import org.scalatest.freespec.AsyncFreeSpec
 import org.scalatest.matchers.should.Matchers
 import ru.tinkoff.petstore.client.order.model.request.CreateOrderRequest
 import ru.tinkoff.petstore.client.order.model.response.OrderResponse
-import ru.tinkoff.petstore.client.wirings.DefaultWirings
-import ru.tinkoff.petstore.client.utils.TestData.{date, id, petId}
+import ru.tinkoff.petstore.utils.TestData.{date, id, petId}
+import ru.tinkoff.petstore.wirings.DefaultWirings
 
 class OrderClientImplSpec
     extends AsyncFreeSpec

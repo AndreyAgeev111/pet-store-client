@@ -1,4 +1,4 @@
-package ru.tinkoff.petstore.client.utils
+package ru.tinkoff.petstore.utils
 
 import java.time.Instant
 import java.util.UUID
