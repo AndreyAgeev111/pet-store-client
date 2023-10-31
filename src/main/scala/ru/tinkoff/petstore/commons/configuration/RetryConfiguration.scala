@@ -15,8 +15,8 @@ object RetryConfiguration {
   private implicit val petClientConfigurationReader: ValueReader[RetryConfiguration] =
     ValueReader.relative(config =>
       RetryConfiguration(
-        FiniteDuration.apply(config.getLong("retry-duration"), "seconds"),
-        config.getInt("amount"),
+        retryDuration = FiniteDuration.apply(config.getLong("retry-duration"), "seconds"),
+        amount = config.getInt("amount"),
       ),
     )
 }
