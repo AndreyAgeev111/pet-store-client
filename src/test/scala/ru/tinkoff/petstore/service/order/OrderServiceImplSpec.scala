@@ -5,7 +5,6 @@ import cats.effect.testing.scalatest.AsyncIOSpec
 import com.dimafeng.testcontainers.{ContainerDef, DockerComposeContainer, ExposedService}
 import com.dimafeng.testcontainers.scalatest.TestContainerForAll
 import org.asynchttpclient.DefaultAsyncHttpClient
-import org.mockito.Mockito.verify
 import org.scalatest.freespec.AsyncFreeSpec
 import org.scalatest.matchers.should.Matchers
 import org.testcontainers.containers.wait.strategy.Wait

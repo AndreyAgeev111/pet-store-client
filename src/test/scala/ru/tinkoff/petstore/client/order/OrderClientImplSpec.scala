@@ -3,7 +3,6 @@ package ru.tinkoff.petstore.client.order
 import cats.effect._
 import cats.effect.testing.scalatest.AsyncIOSpec
 import com.softwaremill.macwire.wire
-import org.scalatest.{BeforeAndAfter, BeforeAndAfterEach}
 import org.scalatest.freespec.AsyncFreeSpec
 import org.scalatest.matchers.should.Matchers
 import ru.tinkoff.petstore.client.order.model.request.CreateOrderRequest
