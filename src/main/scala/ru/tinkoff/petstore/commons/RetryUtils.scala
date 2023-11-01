@@ -12,7 +12,7 @@ trait RetryUtils[F[_]] {
 }
 
 class RetryUtilsImpl[F[_]: Async](logger: Logger[F], retryConfiguration: RetryConfiguration)
-  extends RetryUtils[F] {
+    extends RetryUtils[F] {
   import retryConfiguration.{amount, retryDuration}
 
   def policy: RetryPolicy[F] = RetryPolicies
@@ -25,4 +25,3 @@ class RetryUtilsImpl[F[_]: Async](logger: Logger[F], retryConfiguration: RetryCo
       logger.error(s"Giving up with $error after $totalRetries retries")
   }
 }
-
