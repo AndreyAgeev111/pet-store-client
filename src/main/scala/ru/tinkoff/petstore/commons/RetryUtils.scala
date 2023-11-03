@@ -24,7 +24,7 @@ class RetryUtilsImpl[F[_]: Async](logger: Logger[F], retryConfiguration: RetryCo
 
   def isTimeoutException(e: Throwable): F[Boolean] = e match {
     case _: TimeoutException => true.pure[F]
-    case _ => false.pure[F]
+    case _                   => false.pure[F]
   }
 
   def onError(error: Throwable, retryDetails: RetryDetails): F[Unit] = retryDetails match {
