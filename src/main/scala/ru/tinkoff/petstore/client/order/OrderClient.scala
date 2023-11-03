@@ -27,6 +27,7 @@ class OrderClientImpl[F[_]: Async](
       .post(createOrderUrl)
       .body(request)
       .response(SttpResponseUtils.unwrapResponse[F, OrderResponse])
+      .readTimeout(orderClientConfiguration.timeout)
       .send(sttpBackend)
       .flatMap(_.body)
   }
@@ -37,6 +38,7 @@ class OrderClientImpl[F[_]: Async](
     basicRequest
       .get(listPetsUrl)
       .response(SttpResponseUtils.unwrapResponse[F, Option[OrderResponse]])
+      .readTimeout(orderClientConfiguration.timeout)
       .send(sttpBackend)
       .flatMap(_.body)
   }
