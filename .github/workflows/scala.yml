@@ -57,4 +57,4 @@ jobs:
           distribution: 'temurin'
           cache: 'sbt'
       - name: Publish
-        run: sbt universal:packageBin
+        run: sbt "universal:packageBin

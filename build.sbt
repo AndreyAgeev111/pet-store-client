@@ -18,6 +18,7 @@ val catsRetryVersion = "3.1.0"
 val catsLoggingVersion = "2.6.0"
 
 lazy val root = (project in file("."))
+  .enablePlugins(JavaAppPackaging)
   .settings(
     name := "pet-store-client",
     libraryDependencies ++= Seq(
